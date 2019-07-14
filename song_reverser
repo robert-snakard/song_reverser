@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+temp_name=temp_$1
+
+echo "File $1"
+echo "Temp $temp_file"
+
+cp $1 $temp_name
+ffmpeg -i $temp_name -af areverse $1
+rm $temp_name
